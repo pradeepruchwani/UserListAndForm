@@ -8,8 +8,10 @@
 }
 .nav_bar_wrapper a{
 padding: 30px;
+text-decoration: none;
+color: #ffff;
+font-size: medium;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

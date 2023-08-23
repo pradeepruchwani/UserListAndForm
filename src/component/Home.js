@@ -33,7 +33,8 @@ const Home = () => {
     <div className='container'>
     <div className='py-4'>
       <h1>Display List</h1>
-      <Table striped variant='dark'>
+      <div className='table-responsive'>
+      <Table striped bordered hover variant='dark'>
         <thead>
           <tr>
             <th>Name</th>
@@ -53,6 +54,7 @@ const Home = () => {
           ))}
         </tbody>
       </Table>
+      </div>
       </div>
     </div>
   );

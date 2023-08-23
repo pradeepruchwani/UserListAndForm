@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth } from '../Firebase'
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -10,21 +11,24 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
+      setError(''); // Clear any previous errors
       await auth.signInWithEmailAndPassword(email, password);
       navigate('/'); // Redirect to home page after successful login
     } catch (error) {
+      console.error("Login Error:", error); // Log the error object
       setError('Invalid email or password');
     }
   };
 
   return (
-    <div className='container'>
+    <div className='container1'>
      <div className="w-75 mx-auto shadow p-5">
       <h1>Login</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <div className="form-group">
       <input
         type="email"
+        className="form-control form-control-lg"
         placeholder="Email"
         value={email}
         onChange={e => setEmail(e.target.value)}
@@ -34,6 +38,7 @@ const Login = () => {
       <div className="form-group">
       <input
         type="password"
+        className="form-control form-control-lg"
         placeholder="Password"
         value={password}
         onChange={e => setPassword(e.target.value)}

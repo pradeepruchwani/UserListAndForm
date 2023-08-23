@@ -32,9 +32,9 @@ const Home = () => {
   return (
     <div className='container'>
     <div className='py-4'>
-      <h1>Display List</h1>
-      <div className='table-responsive'>
-      <Table striped bordered hover variant='dark'>
+      <h1 style={{fontFamily:'serif'}}>Display List</h1>
+      <div className='table-responsive table-data'>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Name</th>

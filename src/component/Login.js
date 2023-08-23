@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div className='container1'>
-     <div className="w-75 mx-auto shadow p-5">
+     <div className="w-75 mx-auto shadow p-5 mt-4">
       <h1>Login</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <div className="form-group">
